@@ -1,5 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import "dotenv/config"
 
 const config: HardhatUserConfig = {
   paths: {
@@ -23,6 +24,7 @@ const config: HardhatUserConfig = {
   networks: {
     goerli: {
       url: "https://rpc.ankr.com/eth_goerli",
+      accounts: [process.env.PRIVATE_KEY!]
     },
     localhost: {
       url: "http://localhost:8545",
