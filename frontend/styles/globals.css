@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Karla Regular";
+  src: url("../public/fonts/Karla-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Archivo Expanded Bold";
+  src: url("../public/fonts/Archivo_Expanded-Bold.woff2") format("woff2");
+  font-weight: 500;
+}
+
+html,
+body {
+  font-family: "Karla Regular", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+#__next {
+  border: solid 5px #000;
+  min-height: 100vh;
+}
+
+.fontStyle {
+  font-family: "Karla Regular";
+  font-style: normal;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.sizing {
+  @media (maxwidth: 600px) {
+    maxwidth: "100%";
+  }
+}
+.custom-button {
+  width: 100%;
+}
+
+.custom-button button {
+  background-color: #fff !important;
+  border: 0.225rem solid #999 !important;
+  color: #000 !important;
+  text-transform: uppercase !important;
+  font-family: "Archivo Expanded Bold" !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  /* padding: 1rem 1rem !important; */
+  height: auto;
+  border-radius: inherit !important;
+}
+
+.alice-carousel {
+  transform: rotate(90deg);
+  transform-origin: top left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.rec-carousel-wrapper-overrides .rec-slider-container {
+  height: 100%;
+}
+
+.rec-carousel-wrapper-overrides .rec-carousel {
+  flex-direction: column !important;
+}
+
+.rec-carousel-wrapper-overrides .rec-arrow-overrides {
+  transform: rotate(270deg);
+}
