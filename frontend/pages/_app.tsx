@@ -11,13 +11,14 @@ import {
 
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
+import { alchemyProvider } from '@wagmi/core/providers/alchemy';
 
 import '@rainbow-me/rainbowkit/styles.css';
 
 function App({ Component, pageProps }: AppProps) {
   const { chains, provider } = configureChains(
-    [chain.goerli, chain.hardhat],
-    [publicProvider()],
+    [chain.goerli],
+    [alchemyProvider({ apiKey: 'WkZvJAggmYkFcYatKm-LR6JuudyaMGJG' })],
   );
 
   const { connectors } = getDefaultWallets({
